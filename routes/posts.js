@@ -21,6 +21,7 @@ router.post("/", async (req, res) => {
     starttime: req.body.starttime,
     endtime: req.body.endtime,
     description: req.body.description,
+    location: req.body.location,
   });
   try {
     const savedPost = await post.save();
@@ -61,6 +62,7 @@ router.patch("/:postId", async (req, res) => {
         starttime: req.body.starttime,
         endtime: req.body.endtime,
         description: req.body.description,
+        location: req.body.location,
       },
     };
     console.log(myquery, newvalues);
