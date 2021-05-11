@@ -2,13 +2,12 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv/config");
 
 // Middlewares
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 // routes
 app.get("/", (req, res) => {
